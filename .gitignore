@@ -1,0 +1,21 @@
+# Secretos (nunca subir)
+.env
+.env.*
+!.env.example
+
+# Dependencias
+node_modules/
+
+# Builds y logs
+dist/
+build/
+*.log
+npm-debug.log*
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Copia documental independiente de vertice-cr (no incluir como repo anidado).
+.vertice-cr-work/

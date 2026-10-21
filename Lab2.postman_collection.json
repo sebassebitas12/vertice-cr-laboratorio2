@@ -1,0 +1,341 @@
+{
+  "info": {
+    "_postman_id": "ef5d47a4-f24f-4fae-ae1a-77fc228a4948",
+    "name": "Lab2",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58070161"
+  },
+  "item": [
+    {
+      "name": "01-post-producto-400",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombre\": \"\",\r\n  \"precio\": -5,\r\n  \"stock\": -1\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/productos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "productos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "02-get-producto-404",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/productos/9999",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "productos",
+            "9999"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "03-put-producto-200",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombre\": \"Termo de acero\",\r\n  \"descripcion\": \"Termo de 750 ml, edición actualizada\",\r\n  \"precio\": 13500,\r\n  \"stock\": 20,\r\n  \"categoria\": \"Hogar\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/productos/10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "productos",
+            "10"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "04-delete-producto-409",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/productos/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "productos",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "05-delete-producto-200",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/productos/10\n",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "productos",
+            "10\n"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "06-post-cliente-409",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/clientes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "clientes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "07-get-orden-detalle",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/ordenes/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "ordenes",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "08-post-orden-201",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"cliente_id\": 3,\r\n  \"items\": [\r\n    { \"producto_id\": 6, \"cantidad\": 3 },\r\n    { \"producto_id\": 4, \"cantidad\": 1 }\r\n  ],\r\n  \"cupon_codigo\": \"TEMPORADA15\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/ordenes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "ordenes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "09-post-orden-cupon-409",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"cliente_id\": 3,\r\n  \"items\": [\r\n    { \"producto_id\": 6, \"cantidad\": 3 },\r\n    { \"producto_id\": 4, \"cantidad\": 1 }\r\n  ],\r\n  \"cupon_codigo\": \"TEMPORADA15\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/ordenes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "ordenes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "10-post-orden-stock-409",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"cliente_id\": 4,\r\n  \"items\": [{ \"producto_id\": 6, \"cantidad\": 999 }]\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/ordenes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "ordenes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "11-patch-cancelar-orden",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"estado\": \"cancelada\" }\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/ordenes/3/estado",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "ordenes",
+            "3",
+            "estado"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "12-get-producto-stock-repuesto",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/productos/6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "productos",
+            "6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "13-get-resumen",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/resumen",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "resumen"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
